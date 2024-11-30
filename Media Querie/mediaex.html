@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        /* Media */
+        body{
+            background-color: antiquewhite;
+        }
+        @media(min-width:600px){
+            body{
+                background-color: greenyellow;
+            }
+        }
+        @media(min-width:600px){
+            body{
+                background-color: palevioletred;
+            }
+        }
+
+        /*portrait & Landscape  */
+        @media(orientation:portrait){
+        body{
+                background-color: greenyellow;
+            }
+        }
+        @media(orientation:landscape){
+        body{
+                background-color: red;
+            }
+        }
+        @media (min-width:600px)and(max-width:900px)and(orientation:landscape){
+            body{
+                background-color: bisque;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>There are many people in the class</h1>
+    <p>A dog is a domestic mammal of the family Canidae and the order Carnivora. Its scientific name is Canis lupus familiaris. Dogs are a subspecies of the gray wolf, and they are also related to foxes and jackals. Dogs are one of the two most ubiquitous and most popular domestic animals in the world.</p>
+</body>
+</html>

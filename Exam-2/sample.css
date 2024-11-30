@@ -1,0 +1,40 @@
+/* style for solution-1 */
+
+a {
+    color: blue; 
+    text-decoration: none; 
+  }
+
+  a:hover {
+    color: red;
+  }
+ 
+  a:active {
+    color: green;
+  }
+
+
+  /* style for solution-2 */
+ 
+h1 {
+    font-family: Arial, sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+ 
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6; 
+    text-align: justify; 
+  }
+  
+
+
+/* style for solution-3 */
+ 
+.card {
+    border: 1px solid gray;
+    padding: 20px; 
+    margin: 10px; 
+    max-width: 300px; 
+    box-sizing: border-box; 
+  }
