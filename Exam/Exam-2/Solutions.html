@@ -1,0 +1,261 @@
+<!-- Solution-1 -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample.css">
+ </head>
+ <body>
+    <ul>
+        
+        <li><a href="https://www.example.com">page1</a></li>
+        <li><a href="https://www.example.com">page2</a></li>
+        <li><a href="https://www.example.com">page3</a></li>
+        <li><a href="https://www.example.com">page4</a></li>
+        <li><a href="https://www.example.com">page5</a></li>
+
+    </ul>
+ </body>
+ </html>
+
+ 
+
+
+ <!-- solution-2 -->
+ 
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample.css">
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>Set the font of the title to `Arial`.Set the font size of the paragraph to `1.2rem` and line height to `1.6`.Add text shadow to the title and text alignment to `justify` for the paragraph.</p>
+  </body>
+  </html>
+
+
+<!-- Solution-3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+    <div class="card">
+        Don't think more everthing was done for a reason
+
+    </div>
+</body>
+</html>
+
+<!-- solution-4 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample.css">
+    <style>
+        /* Ensure the body takes up full height of the viewport */
+body {
+  display: flex;
+  justify-content: center; /* Center the navbar horizontally */
+  align-items: center; /* Center the navbar vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style the navigation bar */
+.navbar {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 20px; /* Add spacing between the links */
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+
+        <a href="#school1">school1</a>
+        <a href="#school2">school2</a>
+        <a href="#school3">school3</a>
+
+    </nav>
+</body>
+</html>
+
+
+
+
+
+<!-- solution-5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            grid-template-rows: repeat(2, 1fr); 
+            gap: 10px; 
+            width: 100%; 
+            max-width: 800px; 
+            margin: auto; 
+          }
+
+          .gallery img {
+            width: 100%;
+            height: auto; 
+            border-radius: 8px; 
+          }
+
+
+          @media (max-width: 600px) {
+              .gallery {
+              grid-template-columns: 1fr;
+            }
+          }
+
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="i1.jpg" alt="No image">
+        <img src="i3.jpg" alt="No image">
+    </div>
+</body>
+</html>
+
+
+<!-- solution-7 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+button {
+  width: 150px; 
+  height: 50px; 
+  font-size: 1rem; 
+  background-color: rgb(20, 197, 120);
+  color: white; 
+  transition: transform 0.3s ease; 
+}
+
+
+button:hover {
+  transform: scale(1.2); 
+}
+
+    </style>
+</head>
+<body>
+    <button>submit the test</button>
+</body>
+</html>
+
+
+<!-- solution-8 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Animation</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #f4f4f4;
+    color: white;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation: slide 2s infinite;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(300px);
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="box" >likitha</div>
+</body>
+</html>
+
+
+
+
+<!-- solution-9 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overlapping Boxes</title>
+  <style>
+  body {
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .box1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    
+  }
+
+  .box2 {
+    width: 200px;
+    height: 200px;
+    background-color:yellow; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+</html>

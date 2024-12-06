@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Coffee Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .container1{
+  
+    background-image: url('coffee-image.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; /* Adjust the height of the section */
+
+
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><img src="logo.png">Haven</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="menu">
+        <div class="container1">
+            <h2>Menu</h2>
+
+            <h3>Italian Coffee</h3>
+            <div class="menu-grid">
+                <div>
+                    <p>Espresso - $3 <button onclick="handleOrder()">Order</button></p>
+                    <p>Macchiato - $4 <button onclick="handleOrder()">Order</button></p>
+                </div>
+                <div>
+                    <p>Latte - $5 <button onclick="handleOrder()">Order</button></p>
+                    <p>Cappuccino - $4.5 <button onclick="handleOrder()">Order</button></p>
+                </div>
+            </div>
+            <br>
+            <h3>Spanish Coffee</h3>
+            <div class="menu-grid">
+                <div>
+                    <p>Café con Leche - $4 <button onclick="handleOrder()">Order</button></p>
+                    <p>Carajillo - $5 <button onclick="handleOrder()">Order</button></p>
+                </div>
+                <div>
+                    <p>Bonbon - $4.5 <button onclick="handleOrder()">Order</button></p>
+                    <p>Galão - $4 <button onclick="handleOrder()">Order</button></p>
+                </div>
+            </div>
+            <br>
+            <h3>Cold Coffee</h3>
+            <div class="menu-grid">
+                <div>
+                    <p>Iced Latte - $4 <button onclick="handleOrder()">Order</button></p>
+                    <p>Cold Brew - $5 <button onclick="handleOrder()">Order</button></p>
+                </div>
+                <div>
+                    <p>Frappuccino - $4.5 <button onclick="handleOrder()">Order</button></p>
+                    <p>Iced Mocha - $4 <button onclick="handleOrder()">Order</button></p>
+                </div>
+            </div>
+            <br>
+            <h3>Special Coffee</h3>
+            <div class="menu-grid">
+                <div>
+                    <p>Irish Coffee - $6 <button onclick="handleOrder()">Order</button></p>
+                    <p>Turkish Coffee - $5 <button onclick="handleOrder()">Order</button></p>
+                </div>
+                <div>
+                    <p>Affogato - $5.5 <button onclick="handleOrder()">Order</button></p>
+                    <p>Flat White - $5 <button onclick="handleOrder()">Order</button></p>
+                </div>
+            </div>
+    </section>
+
+
+</body>
+</html>

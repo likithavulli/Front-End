@@ -1,0 +1,162 @@
+
+<html>
+  <head>
+    <title>Bubbles App</title>
+    <style>
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 1000px;
+        border: 5px solid black;
+        margin: 20px auto;
+        border-radius: 4px;
+      }
+      h1 {
+        font-family: "Comic Sans MS";
+        text-align: center;
+        margin: 20px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        margin-right: 130px;
+      }
+      .button {
+        margin-left: 30px;
+        background-color: rgb(253, 253, 253);
+        padding: 14px 36px;
+        cursor: pointer;
+        box-shadow: 4px 4px black;
+        border-radius: 4px;
+        font-family: "Comic Sans MS";
+        font-weight: 550;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgba(244, 242, 242, 0.847)">
+    <h1>Bubbles App</h1>
+    <div class="box">
+      <canvas id="canvas" width="1000" height="300"></canvas>
+    </div>
+
+    <div class="buttons">
+      <button class="button" id="hitButton">Hit</button>
+      <button class="button" id="resetButton">Reset</button>
+    </div>
+
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      // Circle
+      const circleRadius = 90;
+      const circleX = 155;
+      const circleY = canvas.height / 2;
+      let circleColor = "DodgerBlue";
+
+      // Arrow
+      let arrowStartX = canvas.width - 55;
+      const arrowStartY = canvas.height / 2;
+      let arrowEndX = arrowStartX - 80;
+      const arrowEndY = arrowStartY;
+
+      // Drawing circle
+      function drawCircle() {
+        ctx.beginPath();
+        ctx.arc(circleX, circleY, circleRadius, 0, 2 * Math.PI);
+        ctx.fillStyle = circleColor;
+        ctx.fill();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+      }
+
+      // Drawing arrow
+      function drawArrow(x0, y0, x1, y1) {
+        const width = 10;
+        const headLength = 18;
+        const headAngle = Math.PI / 6;
+        const angle = Math.atan2(y1 - y0, x1 - x0);
+
+        ctx.lineWidth = width;
+        ctx.strokeStyle = "black";
+        ctx.fillStyle = "black";
+
+        // Adjust position for arrowhead
+        x1 -= width * Math.cos(angle);
+        y1 -= width * Math.sin(angle);
+
+        ctx.beginPath();
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(x1, y1);
+        ctx.stroke();
+
+        // Creating arrowhead
+        ctx.beginPath();
+        ctx.lineTo(x1, y1);
+        ctx.lineTo(
+          x1 - headLength * Math.cos(angle - headAngle),
+          y1 - headLength * Math.sin(angle - headAngle)
+        );
+        ctx.lineTo(
+          x1 - headLength * Math.cos(angle + headAngle),
+          y1 - headLength * Math.sin(angle + headAngle)
+        );
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+      }
+
+      // Redrawing
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawCircle();
+        drawArrow(arrowStartX, arrowStartY, arrowEndX, arrowEndY);
+      }
+
+      draw();
+
+      // Hit_button
+      document
+        .getElementById("hitButton")
+        .addEventListener("click", function () {
+          const interval = setInterval(function () {
+            const arrowTipX = arrowEndX;
+
+            // distance from arrow tip to the circle
+            const distanceToCircleEdge = Math.abs(
+              arrowTipX - (circleX + circleRadius)
+            );
+
+            if (distanceToCircleEdge <= 5) {
+              clearInterval(interval);
+              circleColor = "#F6C987";
+              arrowStartX = circleX + circleRadius + 78;
+              arrowEndX = arrowStartX - 80;
+              draw();
+            } else {
+              arrowStartX -= 6;
+              arrowEndX -= 6;
+              draw();
+            }
+          }, 50);
+        });
+
+      // Reset_button
+      document
+        .getElementById("resetButton")
+        .addEventListener("click", function () {
+          arrowStartX = canvas.width - 55;
+          arrowEndX = arrowStartX - 80;
+          circleColor = "DodgerBlue";
+          draw();
+        });
+    </script>
+  </body>
+</html>
+Bubble_app.html
+Displaying Bubble_app.html.

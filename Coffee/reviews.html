@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Coffee Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .reviews{
+            color: white;
+            background-image: url("revimg.jpg");  
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+.reviews textarea {
+    color: white;
+    background-image: url("revimg.jpg");  
+    width: 50%;
+    height: 200px; /* Increased size */
+    font-size: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    resize: none; /* Prevent resizing */
+}
+
+.reviews button {
+    background-color: #4b2c20;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reviews button:hover {
+    background-color: #d8c5be;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><img src="logo.png">Haven</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="reviews">
+        <div class="container">
+            <h2>Write a Review</h2>
+            <form action="#" method="POST">
+                <textarea placeholder="Write your review here..." required></textarea>
+                <br><br><center><button type="submit">Submit</center></button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
